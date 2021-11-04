@@ -1,0 +1,27 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+  <div class="container mt-5 bg-light border h-100 p-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  placeholder="digite o nome"
+                  formControlName="nome"
+                  [ngClass]="{'is-invalid': submitted && hasError('nome')}"
+                  required
+                >
+                <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['required']">
+                    Por favor digite um texto para a Tag
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" (click)="onSubmit()">Enviar</button>
+            <button class="btn btn-danger mx-2" (click)="onCancel()">Cancelar</button>
+        </div>
+    </div>
+  </div>
+</form>
+

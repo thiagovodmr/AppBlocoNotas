@@ -1,0 +1,53 @@
+<!-- <div class="card text-white bg-primary ">
+  <div class="card-header">
+      <div class="row">
+          <div class="col-md-6">
+              <h3>{{ titulo }}</h3>
+          </div>
+          <div class="col-md-2">
+              <a class="detalhes-link btn btn-info btn-sm" [routerLink]="['/notas', id ]">
+                  <fa-icon [icon]="['fas', 'search-plus']" size="2x"></fa-icon>
+              </a>
+          </div>
+          <div class="col-md-2">
+            <button class="detalhes-link btn btn-warning btn-sm" (click)="onEdit()">
+                <fa-icon [icon]="['fas', 'edit']" size="2x"></fa-icon>
+            </button>
+          </div>
+          <div class="col-md-2">
+              <button class="detalhes-link btn btn-danger btn-sm" (click)="onDelete()">
+                  <fa-icon [icon]="['fas', 'trash-alt']" size="2x"></fa-icon>
+              </button>
+          </div>
+      </div>
+  </div>
+  <div class="card-body">
+      <p class="card-text">{{ conteudo }}</p>
+  </div>
+</div> -->
+
+
+<div class="card h-100 text-center border border-primary">
+  <div class="card-header">
+    <a class="detalhes-link btn btn-info btn-sm" [routerLink]="['/notas', id ]">
+      <fa-icon [icon]="['fas', 'search-plus']" size="2x"></fa-icon>
+    </a>
+    <button class="detalhes-link btn btn-warning btn-sm" (click)="onEdit()">
+      <fa-icon [icon]="['fas', 'edit']" size="2x"></fa-icon>
+    </button>
+    <button class="detalhes-link btn btn-danger btn-sm" (click)="onDelete()">
+      <fa-icon [icon]="['fas', 'trash-alt']" size="2x"></fa-icon>
+    </button>
+  </div>
+  <div class="card-header text-white bg-primary">
+    <h5 class="card-title">{{titulo | slice:0:20}}{{ titulo.length > 20 ?'....' : '' }}</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      {{ conteudo | slice:0:140 }}{{ conteudo.length > 140 ?'....veja mais em detalhes' : '' }}
+    </p>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>

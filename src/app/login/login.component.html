@@ -1,0 +1,16 @@
+<h1 class="text-center">Login</h1>
+<div class="container mt-5 bg-light border h-100 p-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="mb-3">
+                <label for="user" class="form-label">Usuário</label>
+                <input type="text" [(ngModel)]="usuario.nome" class="form-control" id="user" placeholder="digite o usuário">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" [(ngModel)]="usuario.senha" class="form-control" id="password" placeholder="digite a senha">
+            </div>
+            <button class="btn btn-success"  (click)="fazerLogin()">Enviar</button>
+        </div>
+    </div>
+</div>
