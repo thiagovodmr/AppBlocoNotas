@@ -76,4 +76,5 @@ export class NotaComponent implements OnInit {
       }
     );
   }
+
 }

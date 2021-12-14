@@ -1,0 +1,54 @@
+
+  <div class="container mt-5 bg-light border h-100 p-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+              <h2>categorias já selecionadas: </h2>
+            </div>
+            <div class="ov-y" *ngIf="categoriasJaAssociadas?.length == 0; else listCategoriasAssociadas">
+                <div class="alert alert-info">Nenhuma categoria associada</div>
+            </div>
+            <ng-template #listCategoriasAssociadas>
+              <ul class="list-group">
+                <li class="list-group-item text-center bg-primary text-white my-1"  *ngFor="let c of categoriasJaAssociadas">
+                  {{ c?.nome }}
+                </li>
+              </ul>
+            </ng-template>
+
+            <h2 class="mt-3">Selecione categorias para adicionar: </h2>
+
+            <div class="form-group my-2">
+              <label class="text-center" for="categorias">Categorias:</label>
+              <ng-multiselect-dropdown
+                [placeholder]="'selecione as categorias'"
+                [settings]="dropdownSettings"
+                [data]="dropdownList"
+                [(ngModel)]="selectedItems"
+                (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)"
+                (onDeSelect)="onDeSelect($event)"
+                (onDeSelectAll)="onDeSelectAll()"
+              >
+              </ng-multiselect-dropdown>
+            </div>
+
+
+            <div class="my-5">
+              <button  class="btn btn-success" (click)="onSubmit()">Salvar</button>
+              <button class="btn btn-info mx-2 text-white" (click)="backRoute()">Voltar</button>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <nota-card
+            [id] = "nota.id"
+            [titulo] = "nota.titulo"
+            [conteudo] = "nota.conteudo"
+            [showButtons] = "false">
+          </nota-card>
+          </div>
+    </div>
+  </div>
+
+

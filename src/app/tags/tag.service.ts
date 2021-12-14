@@ -12,4 +12,6 @@ export class TagService extends CrudService<Tag> {
   constructor(protected http: HttpClient) {
     super(http, `${environment.API}tags`);
   }
+
+
 }

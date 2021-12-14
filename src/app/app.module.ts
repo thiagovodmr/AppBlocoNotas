@@ -20,7 +20,7 @@ import { faSearchPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { NgSelectModule } from '@ng-select/ng-select';
+
 
 @NgModule({
   declarations: [

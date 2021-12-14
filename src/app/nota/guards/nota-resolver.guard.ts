@@ -19,7 +19,8 @@ export class NotaResolverGuard implements Resolve<Nota> {
     return of({
       id: null,
       titulo: null,
-      conteudo: null
+      conteudo: null,
+      dataCriacao: null
     });
   }
 }

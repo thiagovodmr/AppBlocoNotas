@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http'
 
 import { Nota } from '../class/nota';
 import { delay, take, tap } from 'rxjs/operators';
+import { Tag } from '../class/tag';
+import { NotaTag } from '../class/nota-tag';
 
 @Injectable({
   providedIn: 'root'

@@ -8,9 +8,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() titulo: string;
-  @Input() conteudo: string;
-  @Input() id: number;
+  @Input() titulo: string = "personalize";
+  @Input() conteudo: string = "personalize";
+  @Input() dataCriacao: Date;
+  @Input() id: number = 0;
+  @Input() showButtons : boolean = true;
 
   @Output() edit = new EventEmitter();
   @Output() delete = new EventEmitter();
