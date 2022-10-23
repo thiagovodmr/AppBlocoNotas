@@ -1,0 +1,37 @@
+ <nav class="navbar navbar-expand-lg navbar-ligth bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">Bloco de Notas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 order-1" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/notas">Notas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/tags">Tags</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/sobre">Sobre</a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-collapse collapse order-2">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link btn btn-info" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="notas/novo">
+                  <fa-icon [icon]="['fas', 'plus-circle']" size="2x"></fa-icon>
+                </a>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+

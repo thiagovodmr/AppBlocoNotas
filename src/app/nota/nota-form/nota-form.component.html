@@ -1,0 +1,33 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+  <div class="container mt-5 bg-light border h-100 p-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="titulo"
+                  placeholder="digite o titulo"
+                  formControlName="titulo"
+                  [ngClass]="{'is-invalid': submitted && hasError('titulo')}"
+                  required
+                >
+                <div class="invalid-feedback" *ngIf="hasError('titulo') && hasError('titulo')['required']">
+                    Por favor informe um titulo
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="textarea" class="form-label">Conteudo</label>
+                <textarea class="form-control" id="conteudo" formControlName="conteudo" [ngClass]="{'is-invalid': submitted && hasError('conteudo')}"></textarea>
+                <div class="invalid-feedback" *ngIf="true">
+                  Por favor preencha o conteudo
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" (click)="onSubmit()">Enviar</button>
+            <button class="btn btn-danger mx-2" (click)="onCancel()">Limpar</button>
+        </div>
+    </div>
+  </div>
+</form>

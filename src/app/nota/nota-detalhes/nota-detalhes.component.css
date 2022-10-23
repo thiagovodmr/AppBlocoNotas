@@ -1,0 +1,10 @@
+td, th, tr{
+  border: solid 1px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th{
+  background-color: blue;
+  color: white;
+}
